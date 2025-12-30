@@ -12,8 +12,9 @@ The **CyberArk Password Manager** service failed to start, entering a "False Neg
 * **Symptom 1:** Service status stuck on "Starting" indefinitely.
 * **Symptom 2:** The Vault logs (`italog.log`) revealed the root cause: The CPM was repeatedly trying to authenticate with bad keys, triggering an automatic security suspension.
 
-![Vault Log IP Suspension](<img width="928" height="380" alt="Screenshot 2025-12-29 224823" src="https://github.com/user-attachments/assets/45d19aa6-e71c-42d2-9831-0b9ae71ccb22" />
-)
+**Vault Log IP Suspension**
+<img width="928" height="380" alt="Screenshot 2025-12-29 224823" src="https://github.com/user-attachments/assets/45d19aa6-e71c-42d2-9831-0b9ae71ccb22" />
+
 *> **Figure 1:** The "Smoking Gun." Vault logs showing `ITATS433E IP Address 10.0.0.2 is suspended`. The Vault was actively blocking the CPM from connecting.*
 
 ---
